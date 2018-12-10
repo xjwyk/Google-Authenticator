@@ -45,8 +45,9 @@
             die('Error: ' . mysqli_error($con));//如果sql执行失败输出错误
         }else{
             echo "<script>
+                    alert('注册成功！');
                     setTimeout(function(){window.location.href='../index.html';},500);
-                /script>";
+                </script>";
         }
     }
 

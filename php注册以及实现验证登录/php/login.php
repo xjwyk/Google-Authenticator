@@ -5,6 +5,7 @@
  * @date    2018-12-03 21:55:24
  * @version $Id$
  */
+    header("Content-type: text/html; charset=utf-8"); 
 
     if(!isset($_POST["submit"])){
         exit("错误执行");
