@@ -1,12 +1,11 @@
-<?php
+ <?php
 /**
  * 
  * @authors Wang Yinkai (15057638632@163.com)
  * @date    2018-12-03 21:55:24
  * @version $Id$
  */
-    header("Content-type: text/html; charset=utf-8"); 
-
+    include('secret.php');
     if(!isset($_POST["submit"])){
         exit("错误执行");
     }//判断是否有submit操作
@@ -23,8 +22,9 @@
     }
     else {  
         mysqli_query($con,"SET NAMES UTF8");  // 设定字符集
+        $secret = encrypt($password, 'E');
 
-        $query = "select * from user where name = '{$_POST['username']}' and pwd = '{$_POST['password']}'";
+        $query = "select * from user where name = '{$_POST['username']}' and pwd = '{$secret}'";
         $result = mysqli_query($con, $query);  
  
         if (!$result) {
