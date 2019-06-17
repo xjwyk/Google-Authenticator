@@ -4,7 +4,7 @@
 
 ### vue_login
 
-#### vue3.0 + koa2 + vuex + vue-router + mysql + element + axios
+#### vue2.6.6 + koa2 + vuex + vue-router + mysql + element + axios
 
 ##### login_server
 
